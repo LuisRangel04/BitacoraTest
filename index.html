@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Luis Rangel</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #007BFF;
+            animation: fadeIn 1s ease-in;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .contenedor {
+            background-color: #e6f2ff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor:hover {
+            transform: scale(1.02);
+        }
+
+        .tema {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            border-left: 4px solid #007BFF;
+            padding-left: 10px;
+        }
+
+        /* Centrar y animar imágenes */
+        img {
+            display: block;
+            margin: 20px auto;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bitácora de Luis Rangel</h1>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <h6>Por Luis Rangel | Grupo A | Diseño Web HTML5 & CSS3 Adaptativo | Agosto 23 de 2025</h6><br>
+            <div class="tema">Tema 1: DOM</div>
+            <h6>1. ¿Qué es el DOM? <br>
+                Ejemplo (plano de la casa en Los Sims): 
+                Cuando entras al modo “Construir” en Los Sims, puedes ver todo lo que tiene tu casa: paredes, muebles, ventanas, sims, plantas.
+                Ese inventario y la forma en que todo está colocado es como el DOM: un mapa de todos los objetos y cómo están organizados.
+                Si quieres cambiar algo (mover un sofá o poner una ventana), usas ese plano. <br>
+                
+                2. El DOM en las animaciones <br>
+                Ejemplo (hacer que un Sim baile):
+                Cuando seleccionas a un Sim y le das la orden “Bailar”, el personaje empieza a moverse.
+                El DOM sería como la lista de instrucciones que recibe ese Sim para animarse:
+                Levantar brazos
+                Mover pies
+                Girar
+                Todo esto ocurre en orden y crea la animación. <br>
+                
+                3. El DOM en los eventos<br>
+                Ejemplo (dar clic a un objeto):
+                En Los Sims, cuando das clic sobre la cama y eliges “Dormir”, el Sim camina hasta la cama y se acuesta.
+                El evento sería el clic sobre la cama, y el DOM es quien recibe esa señal y ejecuta la acción correspondiente. <br>
+                
+                4. El DOM en el CSS<br>
+                Ejemplo (cambiar la ropa de un Sim):
+                Cuando entras a “Crear un Sim” y le cambias la ropa, color de pelo o accesorios, el Sim sigue siendo el mismo personaje, pero su aspecto cambia.
+                El CSS es como el vestuario y el DOM es el Sim que se viste con esos cambios.<br></h6><br>
+            <div class="tema">Captura Figma</div>
+            <img width="500" height="320" src="../Bitacora/Imagenes/Figma.png"><br>
+            <div class="tema">Infografia</div>
+            <img width="500" height="320" src="../Bitacora/Imagenes/MapaMental.png"><br>
+            <img width="500" height="320" src="../Bitacora/Imagenes/MapaMental2.png"><br>
+            <div class="tema">Hola</div>
+            <div class="tema">Mundo</div>
+            <div class="tema">c:</div>
+        </section>
+    </main>
+
+    <footer>
+         2025 - Tortitta
+    </footer>
+</body>
+</html>
