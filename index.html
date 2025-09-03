@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora de Luis Rangel</title>
     <style>
-        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
+ 
         body {
             background-color: #ffffff;
             color: #007BFF;
             animation: fadeIn 1s ease-in;
         }
-
+ 
         header {
             background-color: #007BFF;
             color: white;
@@ -26,17 +25,39 @@
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-
+ 
         h1 {
             font-size: 2.5em;
         }
-
+ 
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+ 
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+ 
+        nav a:hover {
+            text-decoration: underline;
+        }
+ 
         main {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
         }
-
+ 
         .contenedor {
             background-color: #e6f2ff;
             padding: 20px;
@@ -44,40 +65,72 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-
-        .contenedor:hover {
-            transform: scale(1.02);
+ 
+        .contenedor-verde {
+            background-color: #d1f7d1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            transition: transform 0.3s ease;
         }
 
+        .contenedor-rosa {
+            background-color: #f0cde2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+ 
+        .contenedor:hover, .contenedor-verde:hover {
+            transform: scale(1.02);
+        }
+ 
         .tema {
             margin-bottom: 10px;
             font-size: 1.1em;
             border-left: 4px solid #007BFF;
             padding-left: 10px;
         }
-
-        /* Centrar y animar imágenes */
+ 
         img {
             display: block;
             margin: 20px auto;
             transition: transform 0.3s ease;
             border-radius: 8px;
         }
-
+ 
         img:hover {
             transform: scale(1.05);
         }
-
+ 
         footer {
             text-align: center;
             padding: 20px;
             color: #555;
             font-size: 0.9em;
         }
-
+ 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .lista-animaciones {
+            margin-top: 15px;
+            padding-left: 20px;
+            list-style: none;
+        }
+        .lista-animaciones li {
+            margin: 8px 0;
+            background: #ffffffaa;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .lista-animaciones strong {
+            color: #007BFF;
         }
     </style>
 </head>
@@ -85,17 +138,21 @@
     <header>
         <h1>Bitácora de Luis Rangel</h1>
     </header>
-
+    <nav>
+        <a href="#dom">DOM</a>
+        <a href="#viewport">Viewport</a>
+    </nav>
+ 
     <main>
         <section class="contenedor">
-            <h6>Por Luis Rangel | Grupo A | Diseño Web HTML5 & CSS3 Adaptativo | Agosto 23 de 2025</h6><br>
-            <div class="tema">Tema 1: DOM</div>
+            <h6>Por Luis Rangel | Grupo A | Diseño Web HTML5 & CSS3 Adaptativo | Septiembre 02 de 2025</h6><br>
+            <div class="tema" id="dom">Tema 1: DOM</div>
             <h6>1. ¿Qué es el DOM? <br>
-                Ejemplo (plano de la casa en Los Sims): 
+                Ejemplo (plano de la casa en Los Sims):
                 Cuando entras al modo “Construir” en Los Sims, puedes ver todo lo que tiene tu casa: paredes, muebles, ventanas, sims, plantas.
                 Ese inventario y la forma en que todo está colocado es como el DOM: un mapa de todos los objetos y cómo están organizados.
                 Si quieres cambiar algo (mover un sofá o poner una ventana), usas ese plano. <br>
-                
+               
                 2. El DOM en las animaciones <br>
                 Ejemplo (hacer que un Sim baile):
                 Cuando seleccionas a un Sim y le das la orden “Bailar”, el personaje empieza a moverse.
@@ -104,12 +161,12 @@
                 Mover pies
                 Girar
                 Todo esto ocurre en orden y crea la animación. <br>
-                
+               
                 3. El DOM en los eventos<br>
                 Ejemplo (dar clic a un objeto):
                 En Los Sims, cuando das clic sobre la cama y eliges “Dormir”, el Sim camina hasta la cama y se acuesta.
                 El evento sería el clic sobre la cama, y el DOM es quien recibe esa señal y ejecuta la acción correspondiente. <br>
-                
+               
                 4. El DOM en el CSS<br>
                 Ejemplo (cambiar la ropa de un Sim):
                 Cuando entras a “Crear un Sim” y le cambias la ropa, color de pelo o accesorios, el Sim sigue siendo el mismo personaje, pero su aspecto cambia.
@@ -118,15 +175,70 @@
             <img width="500" height="320" src="Imagenes/Figma.png">
             <div class="tema">Infografia</div>
             <img width="500" height="320" src="Imagenes/MapaMental.png">
-            <img width="500" height="320" src="MapaMental2.png">><br> 
-            <div class="tema">Hola</div>
-            <div class="tema">Mundo</div>
-            <div class="tema">c:</div>
+            <img width="500" height="320" src="Imagenes/MapaMental2.png"><br>
+            <div class="tema" id="viewport">Viewport</div>
+            <h6>Es una metaetiqueta; indica al navegador y al área visible de la página web que se ajuste al ancho de la pantalla del dispositivo. Es esencial para que
+                las páginas se adapten a diferentes dispositivos. </h6><br>
+            <div class="tema">Adaptacion & Aceleracion de la IA</div>
+            <img width="500" height="320" src="Imagenes/UACJ IA.png">
+            <div class="tema">Unidades Estáticas & Relativas</div>
+            <h4>Unidades de medida:</h4>
+            <ul>
+            <li><strong>Estaticas:</strong>
+        <ul>
+            <li>px (píxeles)</li>
+            <li>cm (centímetros)</li>
+            <li>mm (milímetros)</li>
+            <li>in (pulgadas)</li>
+            <li>pt (puntos)</li>
+            <li>pc (picas)</li>
+        </ul>
+            </li>
+            <li><strong>Relativas:</strong>
+        <ul>
+            <li>em</li>
+            <li>rem</li>
+            <li>% (porcentaje)</li>
+            <li>vw (viewport width)</li>
+            <li>vh (viewport height)</li>
+            <li>vmin (viewport mínimo)</li>
+            <li>vmax (viewport máximo)</li>
+            <li>ch (caracteres del tipo de letra)</li>
+        </ul>
+            </li>
+        </ul><br>
+        <h4>Unidades estáticas: Son fijas y no cambian con el contexto.<br>
+ 
+            Unidades relativas: Dependen de un valor de referencia y cambian según el contexto.</h4><br>
+ 
+        </section>
+ 
+        <section class="contenedor-verde">
+            <div class="tema">Uso de @Property</div>
+            <h6>Con el uso de @property podemos darle nombre a nuestras propiedades de estilo | Esto nos evita la necesidad de recordar codigos de color, pixeles, medidas, entre otros.</h6><br>
+
+            <h4>Diagrama de Arquitectura Web</h4>
+            <img width="500" height="320" src="Imagenes/ArqWeb.png">
+            <h4>Diagrama de Flujo</h4>
+            <img width="500" height="320" src="Imagenes/Hollow Knight.png">
+        </section>
+
+        <section class="contenedor-rosa">
+            <div class="tema">Animaciones & Delay</div>
+            <h5>Animaciones en CSS</h5>
+            <ul class="lista-animaciones">
+                <li><strong>Color animation:</strong> Cambia colores (texto, fondo, bordes) de forma progresiva.</li>
+                <li><strong>Delay (animation-delay):</strong> Tiempo de espera antes de iniciar la animación.</li>
+                <li><strong>Animation-timing-function:</strong> Controla la velocidad: <em>linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier()</em>.</li>
+                <li><strong>Animation-direction:</strong> Dirección: <em>normal, reverse, alternate, alternate-reverse</em>.</li>
+                <li><strong>Animation-fill-mode:</strong> Estado antes/después: <em>none, forwards, backwards, both</em>.</li>
+            </ul>
         </section>
     </main>
-
+ 
     <footer>
          2025 - Tortitta
     </footer>
 </body>
 </html>
+
