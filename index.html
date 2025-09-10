@@ -101,7 +101,8 @@
  
         .contenedor,
         .contenedor-verde,
-        .contenedor-rosa {
+        .contenedor-rosa,
+        .contenedor-naranja {
             padding: 1.25rem;
             border-radius: 0.625rem;
             box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
@@ -121,8 +122,18 @@
             background-color: #f0cde2;
             margin-top: 2rem;
         }
- 
-        .contenedor:hover, .contenedor-verde:hover, .contenedor-rosa:hover {
+
+        /* Contenedor Naranja */
+        .contenedor-naranja {
+            background-color: orange;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contenedor:hover, 
+        .contenedor-verde:hover, 
+        .contenedor-rosa:hover,
+        .contenedor-naranja:hover {
             transform: scale(1.02);
         }
  
@@ -199,6 +210,12 @@
             header {
                 background-color: orange; 
             }
+
+            /* Naranja → Morado */
+            .contenedor-naranja {
+                background-color: purple;
+                color: white;
+            }
         }
 
         @media (max-width: 480px) {
@@ -232,6 +249,7 @@
                     <li><a href="#bloque-azul">Bloque Azul</a></li>
                     <li><a href="#bloque-verde">Bloque Verde</a></li>
                     <li><a href="#bloque-rosa">Bloque Rosa</a></li>
+                    <li><a href="#bloque-naranja">Bloque Naranja</a></li>
                 </ul>
             </li>
         </ul>
@@ -328,11 +346,17 @@
                 <li><strong>Animation-fill-mode:</strong> Estado antes/después: none, forwards, backwards, both.</li>
             </ul>
         </section>
+
+        <!-- Nuevo Contenedor Naranja -->
+        <section id="bloque-naranja" class="contenedor-naranja">
+            <div class="tema">Nuevo Contenedor Naranja</div>
+            <h5>Aquí puedes escribir tu texto en tamaño H5 y editarlo cuando quieras.</h5>
+        </section>
     </main>
  
     <footer>
-    <p>📩 Correo: <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&dsh=S-264840333%3A1757096189671538&emr=1&flowEntry=ServiceLogin&flowName=GlifWebSignIn&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AdBytiPH91jXdDA5YtREtBA5G4jkxcJFByxko5ObCegUc_95RYWJTWCK1yib5hALWNqW7LpOUAr-Jw&osid=1&service=mail">tortitta04@gmail.com</a></p>
-    <p>📞 Teléfono: <a href="https://i1.sndcdn.com/artworks-crmUEp9aZ0zHTNFO-twyJlw-t500x500.jpg">+52 606 004 0004</a></p>
+    <p>📩 Correo: <a href="mailto:tortitta04@gmail.com">tortitta04@gmail.com</a></p>
+    <p>📞 Teléfono: <a href="tel:+526060040004">+52 606 004 0004</a></p>
     <p>👽 Sígueme en <a href="https://www.reddit.com/user/NoFarm5932/" target="_blank">Reddit</a></p>
     <p>2025 - Tortitta</p>
 </footer>
