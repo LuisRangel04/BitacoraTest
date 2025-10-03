@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composicion Adaptativa</title>
+  <style>
+   
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #f4f4f4, #e8e8e8); 
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .contenedor {
+      display: grid;
+      gap: 20px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card .info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .card h2 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    
+    @media (min-width: 1024px) {
+      .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .contenedor {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mis Ilustraciones Adaptativas</h1>
+  </header>
+
+  <div class="contenedor">
+    <div class="card">
+      <img src="Imagenes/Tatu.png" alt="t.A.T.u">
+      <div class="info">
+        <h2>t.A.T.u</h2>
+        <p>Ilustracion digital de t.A.T.u</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Imagenes/Colores_.jpg" alt="Colores">
+      <div class="info">
+        <h2>Fotomontaje</h2>
+        <p>Fotomontaje con varios elementos irrealistas/ficticios.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="Imagenes/GatoFinal.png" alt="Migato">
+      <div class="info">
+        <h2>Mi mascota Tomy</h2>
+        <p>Una fotografia de mi gato con edicion de pincel.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
