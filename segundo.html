@@ -4,161 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Bitácora de Luis Rangel</title>
-    <style>
-        html { font-size: 16px; scroll-behavior: smooth; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-
-        body {
-            background-color: #ffffff;
-            color: #007BFF;
-            animation: fadeIn 1s ease-in;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        
-        header {
-            background-color: #007BFF;
-            color: white;
-            padding: 1.25rem 0;
-            text-align: center;
-            box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
-        }
-        header h2 {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-       
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #90EE90; 
-            padding: 0.625rem 0;
-            text-align: center;
-            z-index: 100;
-            box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-            position: relative;
-        }
-
-        nav ul li {
-            display: inline-block;
-            position: relative;
-        }
-
-        nav a {
-            color: black;
-            margin: 0 1.25rem;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 0.5rem 0.75rem;
-            display: block;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        
-        nav ul ul {
-            display: none;
-            position: absolute;
-            background-color: #90EE90;
-            padding: 0;
-            margin: 0;
-            border-radius: 0.375rem;
-            min-width: 10rem;
-            box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);
-        }
-        nav ul li:hover > ul { display: block; }
-        nav ul ul li { display: block; }
-
-        
-        main {
-            max-width: 50rem;
-            margin: 2.5rem auto;
-            padding: 1.25rem;
-        }
-
-        .contenedor,
-        .contenedor-verde,
-        .contenedor-rosa,
-        .contenedor-naranja {
-            padding: 1.25rem;
-            border-radius: 0.625rem;
-            box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
-            margin-top: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .contenedor { background-color: #e0ffff; }       
-        .contenedor-verde { background-color: #fffacd; } 
-        .contenedor-rosa { background-color: #e6e6fa; }  
-        .contenedor-naranja { background-color: #ffe4e1; } 
-
-        .contenedor:hover,
-        .contenedor-verde:hover,
-        .contenedor-rosa:hover,
-        .contenedor-naranja:hover {
-            transform: scale(1.02);
-        }
-
-        .tema {
-            margin-bottom: 0.625rem;
-            font-size: 1.1rem;
-            border-left: 0.25rem solid #007BFF;
-            padding-left: 0.625rem;
-        }
-
-        img {
-            display: block;
-            margin: 1.25rem auto;
-            transition: transform 0.3s ease;
-            border-radius: 0.5rem;
-            max-width: 100%;
-            height: auto;
-        }
-        img:hover { transform: scale(1.05); }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: white;
-            font-size: 1rem;
-            background-color: #007BFF;
-        }
-        footer a { color: white; text-decoration: underline; }
-        footer a:hover { color: #ffe0b2; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(0.625rem); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        
-        @media (max-width: 768px) {
-            header h2 { font-size: 1.25rem; }
-            nav a { margin: 0 0.5rem; font-size: 1rem; }
-            main { margin: 1.25rem; padding: 1rem; }
-            header { background-color: orange; }
-            .contenedor-naranja { background-color: purple; color: white; }
-        }
-        @media (max-width: 480px) {
-            header h2 { font-size: 1rem; }
-            nav ul { display: block; }
-            nav ul li { display: block; }
-            nav a { margin: 0.25rem 0; padding: 0.5rem; }
-            header { background-color: orange; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -170,21 +16,24 @@
             <li>
                 <a href="index.html">Primer Parcial</a>
                 <ul>
-                    <li><a href="index.html#bloque-azul">Bloque Azul</a></li>
-                    <li><a href="index.html#bloque-verde">Bloque Verde</a></li>
-                    <li><a href="index.html#bloque-rosa">Bloque Rosa</a></li>
-                    <li><a href="index.html#bloque-naranja">Bloque Naranja</a></li>
+                    <li><a href="index.html#bloque-azul">DOM</a></li>
+                    <li><a href="index.html#bloque-verde">Unidades Estaticas & Relativas</a></li>
+                    <li><a href="index.html#bloque-rosa">@Property</a></li>
+                    <li><a href="index.html#bloque-naranja">@Media</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#">Segundo Parcial</a>
                 <ul>
-                    <li><a href="#bloque-azul">Bloque Celeste</a></li>
-                    <li><a href="#bloque-verde">Bloque Amarillo</a></li>
-                    <li><a href="#bloque-rosa">Bloque Lavanda</a></li>
-                    <li><a href="#bloque-naranja">Bloque Melón</a></li>
+                    <li><a href="#bloque-azul">Propuesta UACJ</a></li>
+                    <li><a href="#bloque-verde">JS & Normalizer | Novelandia</a></li>
+                    <li><a href="#bloque-rosa">Clases separadas</a></li>
+                    
                 </ul>
             </li>
+            <li><a href="tercero.html">Tercer Parcial</a></li>
+
+            
         </ul>
     </nav>
 
@@ -214,12 +63,16 @@
 
         <section id="bloque-rosa" class="contenedor-rosa">
             <h6>Bloque 2</h6><br>
-            <div class="tema">Código JS y Normalizer.css</div>
+            <div class="tema">Código JS y Normalizer.css | Proyecto Parcial 2</div>
             <p>
 
                 <a href="CodigoJS.html" target="_blank" 
            style="display:inline-block; padding:0.75rem 1.5rem; margin:0.5rem; background:#007BFF; color:white; border-radius:0.5rem; text-decoration:none; transition:0.3s;">
            Codigo JS & Normalizer
+        </a>
+               <a href="https://alumnosuacj-my.sharepoint.com/personal/al248178_alumnos_uacj_mx/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fal248178%5Falumnos%5Fuacj%5Fmx%2FDocuments%2FArchivos%20de%20chat%20de%20Microsoft%20Teams%2FPROYECTO%20PARCIAL%202%2Epdf&parent=%2Fpersonal%2Fal248178%5Falumnos%5Fuacj%5Fmx%2FDocuments%2FArchivos%20de%20chat%20de%20Microsoft%20Teams&ga=1" target="_blank" 
+           style="display:inline-block; padding:0.75rem 1.5rem; margin:0.5rem; background:#007BFF; color:white; border-radius:0.5rem; text-decoration:none; transition:0.3s;">
+           Presentacion Parcial 2
         </a>
                 
                 
@@ -246,17 +99,3 @@
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
