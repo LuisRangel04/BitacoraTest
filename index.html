@@ -4,264 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bitácora de Luis Rangel</title>
-    <style>
-        html {
-            font-size: 16px; 
-            scroll-behavior: smooth; 
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
- 
-        body {
-            background-color: #ffffff;
-            color: #007BFF;
-            animation: fadeIn 1s ease-in;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
- 
-        header {
-            background-color: #007BFF; 
-            color: white;
-            padding: 1.25rem 0;
-            text-align: center;
-            box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
-            transition: background-color 0.3s ease;
-        }
- 
-        h1 {
-            font-size: 2.5rem;
-        }
- 
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #90EE90; 
-            padding: 0.625rem 0;
-            text-align: center;
-            z-index: 100;
-            box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-            position: relative;
-        }
-
-        nav ul li {
-            display: inline-block;
-            position: relative;
-        }
-
-        nav a {
-            color: black;
-            margin: 0 1.25rem;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 0.5rem 0.75rem;
-            display: block;
-        }
- 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        nav ul ul {
-            display: none;
-            position: absolute;
-            background-color: #90EE90;
-            padding: 0;
-            margin: 0;
-            border-radius: 0.375rem;
-            min-width: 10rem;
-            box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);
-        }
-
-        nav ul li:hover > ul {
-            display: block;
-        }
-
-        nav ul ul li {
-            display: block;
-        }
- 
-        main {
-            max-width: 50rem;
-            margin: 2.5rem auto;
-            padding: 1.25rem;
-        }
- 
-        .contenedor,
-        .contenedor-verde,
-        .contenedor-rosa,
-        .contenedor-naranja {
-            padding: 1.25rem;
-            border-radius: 0.625rem;
-            box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .contenedor {
-            background-color: #e6f2ff;
-        }
- 
-        .contenedor-verde {
-            background-color: #d1f7d1;
-            margin-top: 2rem;
-        }
-
-        .contenedor-rosa {
-            background-color: #f0cde2;
-            margin-top: 2rem;
-        }
-
-        /* Contenedor Naranja */
-        .contenedor-naranja {
-            background-color: orange;
-            margin-top: 2rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .contenedor:hover, 
-        .contenedor-verde:hover, 
-        .contenedor-rosa:hover,
-        .contenedor-naranja:hover {
-            transform: scale(1.02);
-        }
- 
-        .tema {
-            margin-bottom: 0.625rem;
-            font-size: 1.1rem;
-            border-left: 0.25rem solid #007BFF;
-            padding-left: 0.625rem;
-        }
- 
-        img {
-            display: block;
-            margin: 1.25rem auto;
-            transition: transform 0.3s ease;
-            border-radius: 0.5rem;
-            max-width: 100%;
-            height: auto;
-        }
- 
-        img:hover {
-            transform: scale(1.05);
-        }
- 
-        footer {
-           text-align: center;
-           padding: 1.5rem;
-           color: white;
-           font-size: 1rem;
-           background-color: orange; 
-         }
-
-         footer a {
-          color: white;
-         text-decoration: underline;
-         }
-
-         footer a:hover {
-         color: #ffe0b2; 
-         }
- 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(0.625rem); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .lista-animaciones {
-            margin-top: 1rem;
-            padding-left: 1.25rem;
-            list-style: none;
-        }
-        .lista-animaciones li {
-            margin: 0.5rem 0;
-            background: #ffffffaa;
-            padding: 0.625rem;
-            border-radius: 0.375rem;
-            box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.1);
-        }
-        .lista-animaciones strong {
-            color: #007BFF;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 1rem;
-            }
-            main {
-                margin: 1.25rem;
-                padding: 1rem;
-            }
-            header {
-                background-color: orange; 
-            }
-
-            
-            .contenedor-naranja {
-                background-color: purple;
-                color: white;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            nav ul {
-                display: block;
-            }
-            nav ul li {
-                display: block;
-            }
-            nav a {
-                margin: 0.25rem 0;
-                padding: 0.5rem;
-            }
-            header {
-                background-color: orange; 
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h2>Bitácora Estudiantil | 227797</h2>
-    </header>
-   <nav>
-    <ul>
-        <li><a href="#">Primer Parcial</a>
-            <ul>
-                <li><a href="#bloque-azul">Bloque Azul</a></li>
-                <li><a href="#bloque-verde">Bloque Verde</a></li>
-                <li><a href="#bloque-rosa">Bloque Rosa</a></li>
-                <li><a href="#bloque-naranja">Bloque Naranja</a></li>
-            </ul>
-        </li>
-        <li><a href="segundo.html">Segundo Parcial</a></li> <!-- 🔹 Nuevo enlace -->
-    </ul>
-</nav>
+    <div id="parallax-container">
+        <div id="layer1" aria-hidden="true"></div> 
+        <div id="layer2">
+            <img src="Valorant.jpg" alt="Capa frontal">
+        </div>
 
- 
+        <div class="titulo-parallax" role="banner">
+            <h1>Bitácora de Luis Rangel</h1>
+            <p>Diseño Web HTML5 & CSS3 Adaptativo</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Primer Parcial</a>
+                <ul>
+                    <li><a href="#bloque-azul">DOM</a></li>
+                    <li><a href="#bloque-verde">Unidades Estaticas & Relativas</a></li>
+                    <li><a href="#bloque-rosa">@Property</a></li>
+                    <li><a href="#bloque-naranja">@Media</a></li>
+                </ul>
+            </li>
+            <li><a href="segundo.html">Segundo Parcial</a></li>
+            <li><a href="tercero.html">Tercer Parcial</a></li>
+
+            
+        </ul>
+    </nav>
+
     <main>
         <section id="bloque-azul" class="contenedor">
-            <h6>Por Luis Rangel | Grupo A | Diseño Web HTML5 & CSS3 Adaptativo | Octubre 09 de 2025</h6><br>
+            <h6>Por Luis Rangel | Grupo A | Diseño Web HTML5 & CSS3 Adaptativo | Noviembre 05 de 2025</h6><br>
             <div class="tema" id="dom">Tema 1: DOM</div>
-            <h6>1. ¿Qué es el DOM? <br>
+             <h6>1. ¿Qué es el DOM? <br>
                 Ejemplo (plano de la casa en Los Sims):
                 Cuando entras al modo “Construir” en Los Sims, puedes ver todo lo que tiene tu casa: paredes, muebles, ventanas, sims, plantas.
                 Ese inventario y la forma en que todo está colocado es como el DOM: un mapa de todos los objetos y cómo están organizados.
@@ -285,49 +64,40 @@
                 Ejemplo (cambiar la ropa de un Sim):
                 Cuando entras a “Crear un Sim” y le cambias la ropa, color de pelo o accesorios, el Sim sigue siendo el mismo personaje, pero su aspecto cambia.
                 El CSS es como el vestuario y el DOM es el Sim que se viste con esos cambios.<br></h6><br>
+
             <div class="tema">Captura Figma</div>
             <img width="500" height="320" src="Figma.png">
-            <div class="tema">Infografia</div>
+
+            <div class="tema">Infografía</div>
             <img width="500" height="320" src="MapaMental.png">
             <img width="500" height="320" src="MapaMental2.png"><br>
+
             <div class="tema" id="viewport">Viewport</div>
             <h6>Es una metaetiqueta; indica al navegador y al área visible de la página web que se ajuste al ancho de la pantalla del dispositivo. Es esencial para que
-                las páginas se adapten a diferentes dispositivos. </h6><br>
-            <div class="tema">Adaptacion & Aceleracion de la IA</div>
+                las páginas se adapten a diferentes dispositivos.</h6><br>
+
+            <div class="tema">Adaptación & Aceleración de la IA</div>
             <img width="500" height="320" src="UACJ IA.png">
-            <a href="https://play.kahoot.it/v2/?quizId=745f332d-435a-4340-846a-b7fe4a0cdae6">Kahoot | Adapatacion de IA</a>
+            <a href="https://play.kahoot.it/v2/?quizId=745f332d-435a-4340-846a-b7fe4a0cdae6">Kahoot | Adaptación de IA</a>
         </section>
- 
+
         <section id="bloque-verde" class="contenedor-verde">
             <div class="tema">Unidades Estáticas & Relativas</div>
             <h4>Unidades de medida:</h4>
             <ul>
-            <li><strong>Estaticas:</strong>
-        <ul>
-            <li>px (píxeles)</li>
-            <li>cm (centímetros)</li>
-            <li>mm (milímetros)</li>
-            <li>in (pulgadas)</li>
-            <li>pt (puntos)</li>
-            <li>pc (picas)</li>
-        </ul>
-            </li>
-            <li><strong>Relativas:</strong>
-        <ul>
-            <li>em</li>
-            <li>rem</li>
-            <li>% (porcentaje)</li>
-            <li>vw (viewport width)</li>
-            <li>vh (viewport height)</li>
-            <li>vmin (viewport mínimo)</li>
-            <li>vmax (viewport máximo)</li>
-            <li>ch (caracteres del tipo de letra)</li>
-        </ul>
-            </li>
-        </ul><br>
-        <h4>Unidades estáticas: Son fijas y no cambian con el contexto.<br>
- 
-            Unidades relativas: Dependen de un valor de referencia y cambian según el contexto.</h4><br>
+                <li><strong>Estáticas:</strong>
+                    <ul>
+                        <li>px</li><li>cm</li><li>mm</li><li>in</li><li>pt</li><li>pc</li>
+                    </ul>
+                </li>
+                <li><strong>Relativas:</strong>
+                    <ul>
+                        <li>em</li><li>rem</li><li>%</li><li>vw</li><li>vh</li><li>vmin</li><li>vmax</li><li>ch</li>
+                    </ul>
+                </li>
+            </ul><br>
+            <h4>Unidades estáticas: Son fijas y no cambian con el contexto.<br>
+                Unidades relativas: Dependen de un valor de referencia y cambian según el contexto.</h4><br>
         </section>
 
         <section id="bloque-rosa" class="contenedor-rosa">
@@ -336,20 +106,20 @@
 
             <h4>Diagrama de Arquitectura Web</h4>
             <img width="500" height="320" src="ArqWeb.png">
+
             <h4>Diagrama de Flujo</h4>
             <img width="500" height="320" src="Hollow Knight.png">
 
             <div class="tema">Animaciones & Delay</div>
             <h5>Animaciones en CSS</h5>
             <ul class="lista-animaciones">
-                <li><strong>Color animation:</strong> Cambia colores (texto, fondo, bordes) de forma progresiva.</li>
+                <li><strong>Color animation:</strong> Cambia colores de forma progresiva.</li>
                 <li><strong>Delay (animation-delay):</strong> Tiempo de espera antes de iniciar la animación.</li>
-                <li><strong>Animation-timing-function:</strong> Controla la velocidad: linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier().</li>
-                <li><strong>Animation-direction:</strong> Dirección: normal, reverse, alternate, alternate-reverse.</li>
-                <li><strong>Animation-fill-mode:</strong> Estado antes/después: none, forwards, backwards, both.</li>
+                <li><strong>Animation-timing-function:</strong> Controla la velocidad.</li>
+                <li><strong>Animation-direction:</strong> Dirección de la animación.</li>
+                <li><strong>Animation-fill-mode:</strong> Estado antes/después de animar.</li>
             </ul>
         </section>
-
 
         <section id="bloque-naranja" class="contenedor-naranja">
             <div class="tema">@Media</div>
@@ -357,12 +127,14 @@
                 Ejemplo: que en una computadora el menú se vea horizontal, pero en un celular se vea vertical.</h5>
         </section>
     </main>
- 
+
     <footer>
-    <p>📩 Correo: <a href="mailto:tortitta04@gmail.com">tortitta04@gmail.com</a></p>
-    <p>📞 Teléfono: <a href="tel:+526060040004">+52 606 004 0004</a></p>
-    <p>👽 Sígueme en <a href="https://www.reddit.com/user/NoFarm5932/" target="_blank">Reddit</a></p>
-    <p>2025 - Tortitta</p>
-</footer>
+        <p>📩 Correo: <a href="mailto:tortitta04@gmail.com">tortitta04@gmail.com</a></p>
+        <p>📞 Teléfono: <a href="tel:+526060040004">+52 606 004 0004</a></p>
+        <p>👽 Sígueme en <a href="https://www.reddit.com/user/NoFarm5932/" target="_blank">Reddit</a></p>
+        <p>2025 - Tortitta</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
