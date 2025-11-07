@@ -1,0 +1,312 @@
+
+#parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;               
+    overflow: hidden;
+    background-color: #000;      
+}
+
+
+#layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url('Veto.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    transform: translate3d(0,0,0); 
+}
+
+
+#layer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; 
+    will-change: transform;
+    transform: translate3d(0,0,0); 
+}
+
+#layer2 img {
+    width: 45%;
+    max-width: 650px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    pointer-events: auto; 
+}
+
+
+.titulo-parallax {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    padding: 0 1rem;
+    max-width: 90%;
+}
+
+.titulo-parallax h1 {
+    font-size: 3rem;
+    margin: 0 0 0.25rem 0;
+    line-height: 1;
+}
+
+.titulo-parallax p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #007BFF;
+    animation: fadeIn 1s ease-in;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1.25rem 0;
+    text-align: center;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #90EE90;
+    padding: 0.625rem 0;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav a {
+    color: black;
+    margin: 0 1.25rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    display: block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #90EE90;
+    padding: 0;
+    margin: 0;
+    border-radius: 0.375rem;
+    min-width: 10rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.15);
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+}
+
+
+main {
+    max-width: 50rem;
+    margin: 2.5rem auto;
+    padding: 1.25rem;
+}
+
+
+.contenedor,
+.contenedor-verde,
+.contenedor-rosa,
+.contenedor-naranja {
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+/* Primer Parcial */
+.contenedor { background-color: #e6f2ff; }      /* Azul */
+.contenedor-verde { background-color: #d1f7d1; }/* Verde */
+.contenedor-rosa { background-color: #f0cde2; } /* Rosa */
+.contenedor-naranja { background-color: orange; }/* Naranja */
+
+/* Segundo Parcial */
+#bloque-azul.contenedor { background-color: #e0ffff; }       /* Celeste claro */
+#bloque-verde.contenedor-verde { background-color: #fffacd; } /* Amarillo suave */
+#bloque-rosa.contenedor-rosa { background-color: #e6e6fa; }   /* Lavanda */
+#bloque-naranja.contenedor-naranja { background-color: #ffe4e1; } /* Melón */
+
+/* Hover universal */
+.contenedor:hover,
+.contenedor-verde:hover,
+.contenedor-rosa:hover,
+.contenedor-naranja:hover {
+    transform: scale(1.02);
+}
+
+.tema {
+    margin-bottom: 0.625rem;
+    font-size: 1.1rem;
+    border-left: 0.25rem solid #007BFF;
+    padding-left: 0.625rem;
+}
+
+img {
+    display: block;
+    margin: 1.25rem auto;
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.lista-animaciones {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    list-style: none;
+}
+
+.lista-animaciones li {
+    margin: 0.5rem 0;
+    background: #ffffffaa;
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.1);
+}
+
+.lista-animaciones strong {
+    color: #007BFF;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    font-size: 1rem;
+    background-color: orange;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ffe0b2;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(0.625rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+    #layer2 img { width: 60%; max-width: 520px; }
+    .titulo-parallax h1 { font-size: 2.25rem; }
+}
+
+@media (max-width: 768px) {
+    #parallax-container { height: 70vh; }
+
+    #layer1, #layer2 {
+        transform: none !important;
+        will-change: auto !important;
+    }
+
+    #layer2 img { width: 70%; max-width: 420px; }
+
+    .titulo-parallax h1 { font-size: 1.8rem; }
+    .titulo-parallax p { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+    header h1, header h2 {
+        font-size: 1rem;
+    }
+    nav ul {
+        display: block;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav a {
+        margin: 0.25rem 0;
+        padding: 0.5rem;
+    }
+    header {
+        background-color: orange;
+    }
+
+    #parallax-container { height: 60vh; }
+    #layer2 img { width: 85%; max-width: 360px; }
+    .titulo-parallax h1 { font-size: 1.5rem; }
+    .titulo-parallax p { font-size: 0.9rem; }
+}
+
+
