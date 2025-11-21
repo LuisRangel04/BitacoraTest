@@ -187,18 +187,18 @@ main {
 }
 
 /* Primer Parcial */
-.contenedor { background-color: #e6f2ff; }      /* Azul */
-.contenedor-verde { background-color: #d1f7d1; }/* Verde */
-.contenedor-rosa { background-color: #f0cde2; } /* Rosa */
-.contenedor-naranja { background-color: orange; }/* Naranja */
+.contenedor { background-color: #e6f2ff; }      
+.contenedor-verde { background-color: #d1f7d1; }
+.contenedor-rosa { background-color: #f0cde2; } 
+.contenedor-naranja { background-color: orange; }
 
 /* Segundo Parcial */
-#bloque-azul.contenedor { background-color: #e0ffff; }       /* Celeste claro */
-#bloque-verde.contenedor-verde { background-color: #fffacd; } /* Amarillo suave */
-#bloque-rosa.contenedor-rosa { background-color: #e6e6fa; }   /* Lavanda */
-#bloque-naranja.contenedor-naranja { background-color: #ffe4e1; } /* Melón */
+#bloque-azul.contenedor { background-color: #e0ffff; }       
+#bloque-verde.contenedor-verde { background-color: #fffacd; } 
+#bloque-rosa.contenedor-rosa { background-color: #e6e6fa; }   
+#bloque-naranja.contenedor-naranja { background-color: #ffe4e1; } 
 
-/* Hover universal */
+
 .contenedor:hover,
 .contenedor-verde:hover,
 .contenedor-rosa:hover,
@@ -308,5 +308,28 @@ footer a:hover {
     .titulo-parallax h1 { font-size: 1.5rem; }
     .titulo-parallax p { font-size: 0.9rem; }
 }
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+.cookie-banner button {
+  background: #4caf50;
+  border: none;
+  padding: 8px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 
