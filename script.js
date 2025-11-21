@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const layer2 = document.getElementById('layer2');
     const speed1 = 0.35; 
     const speed2 = 0.12; 
-
     function updateParallax() {
         const scrollY = window.scrollY;
         layer1.style.transform = `translate3d(0, ${scrollY * speed1}px, 0)`;
@@ -14,16 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(updateParallax);
     });
     updateParallax();
+
     const banner = document.getElementById("cookie-banner");
     const btn = document.getElementById("accept-cookies");
-    if (banner && btn && !localStorage.getItem("cookies-aceptadas")) {
+    if (!localStorage.getItem("cookies-aceptadas")) {
         banner.style.display = "flex";
+    } else {
+        banner.style.display = "none";
     }
-    if (btn) {
-        btn.addEventListener("click", () => {
-            localStorage.setItem("cookies-aceptadas", "true");
-            banner.style.display = "none";
-        });
-    }
+    btn.addEventListener("click", () => {
+        localStorage.setItem("cookies-aceptadas", "true");
+        banner.style.display = "none";
+    });
 
 });
