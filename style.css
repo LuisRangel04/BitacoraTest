@@ -20,7 +20,7 @@
     background-position: center;
     background-repeat: no-repeat;
     will-change: transform;
-    transform: translate3d(0,0,0); 
+    transform: none; 
 }
 
 
@@ -331,6 +331,7 @@ footer a:hover {
   color: #fff;
   cursor: pointer;
 }
+
 
 
 
