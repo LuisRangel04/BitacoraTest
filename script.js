@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const speed2 = 0.12; 
     function updateParallax() {
         const scrollY = window.scrollY;
-        layer1.style.transform = `translate3d(0, ${scrollY * speed1}px, 0)`;
+        layer1.style.backgroundPosition = `center ${scrollY * 0.35}px`;
         layer2.style.transform = `translate3d(0, ${scrollY * speed2}px, 0)`;
     }
 
@@ -27,3 +27,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
